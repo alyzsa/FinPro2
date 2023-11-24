@@ -1,6 +1,6 @@
 module github.com/alyzsa/FinPro2
 
-go 1.21.0
+go 1.21
 
 require gorm.io/driver/postgres v1.5.4
 
