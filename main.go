@@ -1,12 +1,15 @@
 package main
 
 import (
+	"os"
+
 	"github.com/alyzsa/FinPro2/database"
-	"github.com/alyzsa/FinPro2/router"
 )
 
 func main() {
 	database.StartDB()
-	r := router.StartApp()
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 }
