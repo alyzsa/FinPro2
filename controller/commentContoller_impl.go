@@ -105,12 +105,12 @@ func (s *CommentHandlerImpl) CommentGet(c *gin.Context) {
 		"created_at":	Comment.CreatedAt,
 		"updated_at":	Comment.UpdatedAt,
 		"User":gin.H{
-			"id":		Comment.ID,
+			"id":		Comment.UserID,
 			"email": 	Comment.User.Email,
 			"username":	Comment.User.Username,
 		},
 		"Photo": gin.H {
-			"id":		Comment.ID,
+			"id":		Comment.PhotoID,
 			"title": 	Comment.Photo.Title,
 			"caption":	Comment.Photo.Caption,
 			"photo_id":		Comment.PhotoID,
